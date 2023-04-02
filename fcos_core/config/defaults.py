@@ -299,6 +299,14 @@ _C.MODEL.FCOS.LOSS_ALPHA = 0.25
 # Focal loss parameter: gamma
 _C.MODEL.FCOS.LOSS_GAMMA = 2.0
 
+# MCCL
+_C.MODEL.FCOS.LOSS_TYPE = "fl"
+_C.MODEL.FCOS.MCCL_WEIGHT = 1.0
+_C.MODEL.FCOS.NUM_MC_SAMPLES = 0
+_C.MODEL.FCOS.MCCL_IOU_WEIGHT = 1.0
+_C.MODEL.FCOS.MCCL_CLS_DROPOUT = 0.5
+_C.MODEL.FCOS.MCCL_IOU_DROPOUT = 0.5
+
 # the number of convolutions used in the cls and bbox tower
 _C.MODEL.FCOS.NUM_CONVS = 4
 

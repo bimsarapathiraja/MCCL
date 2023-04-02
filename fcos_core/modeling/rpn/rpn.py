@@ -7,6 +7,7 @@ from fcos_core.modeling import registry
 from fcos_core.modeling.box_coder import BoxCoder
 from fcos_core.modeling.rpn.retinanet.retinanet import build_retinanet
 from fcos_core.modeling.rpn.fcos.fcos import build_fcos
+from fcos_core.modeling.rpn.fcos.fcos_mccl import build_fcos_mccl
 from .loss import make_rpn_loss_evaluator
 from .anchor_generator import make_anchor_generator
 from .inference import make_rpn_postprocessor
@@ -203,7 +204,12 @@ def build_rpn(cfg, in_channels):
     This gives the gist of it. Not super important because it doesn't change as much
     """
     if cfg.MODEL.FCOS_ON:
-        return build_fcos(cfg, in_channels)
+        if cfg.MODEL.FCOS.LOSS_TYPE == "fl":
+            return build_fcos(cfg, in_channels)
+        elif cfg.MODEL.FCOS.LOSS_TYPE == "mccl":
+            return build_fcos_mccl(cfg, in_channels)
+        else:
+            raise ValueError("Unknown loss type for FCOS")
     if cfg.MODEL.RETINANET_ON:
         return build_retinanet(cfg, in_channels)
 
