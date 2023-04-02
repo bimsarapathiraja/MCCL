@@ -14,6 +14,7 @@ from .roi_pool import ROIPool
 from .roi_pool import roi_pool
 from .smooth_l1_loss import smooth_l1_loss
 from .sigmoid_focal_loss import SigmoidFocalLoss
+from .mccl import MCCLLoss
 from .iou_loss import IOULoss
 from .scale import Scale
 from .dcn.deform_conv_func import deform_conv, modulated_deform_conv
@@ -39,6 +40,7 @@ __all__ = [
     "BatchNorm2d",
     "FrozenBatchNorm2d",
     "SigmoidFocalLoss",
+    "MCCLLoss",
     'deform_conv',
     'modulated_deform_conv',
     'DeformConv',
