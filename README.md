@@ -87,7 +87,7 @@ Confidence histograms and reliability diagrams
 Calibration heatmaps
 
 <p align="center">
-     <img src="figures/heat2.png" > 
+     <img src="figures/heat3.png" > 
 </p>
 
 ### Contact
