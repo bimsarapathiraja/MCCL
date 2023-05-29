@@ -23,11 +23,13 @@ If you find our work useful. Please consider giving a star :star: and a citation
 ```
 
 ### Contents  
-1) [Highlights](#Highlights) 
-2) [Installation](#Installation)
-3) [Pretrained Models](#Pretrained-Models)
-4) [Results](#Results)
-6) [Reliability diagrams and calibration heatmaps](#Visualizations)
+1) [Highlights](#highlights) 
+2) [Installation](#installation)
+3) [Training and Evaluation](#training-and-evaluation)
+4) [Results](#results)
+5) [Visualizations](#visualizations)
+6) [Contact](#contact)
+7) [Acknowledgement](#acknowledgement)
 
 
 ### Highlights
@@ -59,7 +61,37 @@ python -m torch.distributed.launch \
             MODEL.FCOS.LOSS_TYPE mccl \ # use MCCL loss
             MODEL.FCOS.MCCL_WEIGHT 1.0 \ # weight for the whole MCCL los
             MODEL.FCOS.NUM_MC_SAMPLES 5 \ # Number of MC dropouts
-            MODEL.FCOS.MCCL_IOU_WEIGHT 0.01 \ # weight of the LC component of MCCL
+            MODEL.FCOS.MCCL_IOU_WEIGHT 0.1 \ # weight of the LC component of MCCL
             MODEL.FCOS.MCCL_CLS_DROPOUT 0.5 \ # MC dropout value for class prediction
             MODEL.FCOS.MCCL_IOU_DROPOUT 0.1 # MC dropout value for bounding box prediction
 ```
+For Detection Expected Calibration Error ([D-ECE](https://github.com/EFS-OpenSource/calibration-framework#detection-confidence-of-objects)) evaluation, follow the guidelines [here](https://pypi.org/project/netcal/)
+
+### Results
+
+Results report Detection Expected Calibration Error (D-ECE) for In-Domain (MS-COCO) and Out-Domain (Cor-COCO) for baseline and our proposed method.
+
+| Methods                                                      | D-ECE (MS-COCO) | APbox (MS-COCO) |    D-ECE (CorCOCO)    | APbox (CorCOCO) | model | 
+|--------------------------------------------------------------|:---------:|:----------:|:---------:|:------:|:------:|
+| [Baseline](https://arxiv.org/abs/1904.01355)                 |   15.42   |   54.91    |   15.90   |   30.01    | -     |
+| [MCCL (Ours)](https://openaccess.thecvf.com/content/CVPR2023/papers/Pathiraja_Multiclass_Confidence_and_Localization_Calibration_for_Object_Detection_CVPR_2023_paper.pdf)                                          |   **14.94**   |   54.85    |   **14.94**    |   29.96    |   -   |
+
+### Visualizations
+
+Confidence histograms and reliability diagrams
+
+<p align="center">
+     <img src="figures/rel.png" > 
+</p>
+
+Calibration heatmaps
+
+<p align="center">
+     <img src="figures/heat.png" > 
+</p>
+
+### Contact
+In case of any query, create issue or contact bimsara.pathiraja@mbzuai.ac.ae 
+
+### Acknowledgement
+This codebase is built on <a href="https://github.com/tianzhi0549/FCOS">FCOS</a> and <a href="https://pypi.org/project/netcal/">Detection Calibration</a>
