@@ -81,13 +81,13 @@ Results report Detection Expected Calibration Error (D-ECE) for In-Domain (MS-CO
 Confidence histograms and reliability diagrams
 
 <p align="center">
-     <img src="figures/rel.png" > 
+     <img src="figures/rel2.png" > 
 </p>
 
 Calibration heatmaps
 
 <p align="center">
-     <img src="figures/heat.png" > 
+     <img src="figures/heat2.png" > 
 </p>
 
 ### Contact
