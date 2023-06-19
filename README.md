@@ -1,7 +1,7 @@
 # Multiclass Confidence and Localization Calibration for Object Detection (CVPR 2023)
 [Bimsara Pathiraja](https://scholar.google.es/citations?hl=en&user=7ViSGnIAAAAJ), [Malitha Gunawardhana](https://scholar.google.com/citations?user=tsvNezcAAAAJ&hl=en), [Muhammad Haris Khan](https://scholar.google.com/citations?user=ZgERfFwAAAAJ&hl=en)
 
-[![paper](https://img.shields.io/badge/CVF-Paper-42FF33)](https://openaccess.thecvf.com/content/CVPR2023/papers/Pathiraja_Multiclass_Confidence_and_Localization_Calibration_for_Object_Detection_CVPR_2023_paper.pdf) 
+[![paper](https://img.shields.io/badge/arXiv-Paper-42FF33)](https://arxiv.org/abs/2306.08271) 
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://bimsarapathiraja.github.io/mccl-project-page/) 
 
 <!-- [![arXiv](https://img.shields.io/badge/arXiv-Paper-FFF933)](https://arxiv.org/pdf/2207.12392.pdf)  -->
