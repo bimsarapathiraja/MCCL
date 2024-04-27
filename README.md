@@ -91,7 +91,7 @@ Calibration heatmaps
 </p>
 
 ### Contact
-In case of any query, create issue or contact bimsara.pathiraja@mbzuai.ac.ae 
+In case of any query, create issue or contact bgpbimsara@gmail.com
 
 ### Acknowledgement
 This codebase is built on <a href="https://github.com/tianzhi0549/FCOS">FCOS</a> and <a href="https://pypi.org/project/netcal/">Detection Calibration</a>
